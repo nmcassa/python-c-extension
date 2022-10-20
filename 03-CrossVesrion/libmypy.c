@@ -7,8 +7,8 @@ PyObject * hello(PyObject * self) {
 }
 
 PyObject * heyman(PyObject *self, PyObject *args) {
-	int num;
-	char *name;
+	int num = -1;
+	char *name = NULL;
 
 	if(!PyArg_ParseTuple(args, "is", &num, &name))
 		return NULL;

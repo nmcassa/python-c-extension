@@ -1,27 +1,19 @@
 #include "libmypy.h"
+#include <Python.h>
 
 char hellofunc_docs[] = "Hello world description.";
 
-PyMethodDef helloworld_funcs[] = {
-	{	"hello",
-		(PyCFunction)hello,
-		METH_NOARGS,
-		hellofunc_docs},
-	{	NULL}
+static PyMethodDef helloworld_funcs[] = {
+	{"hello", (PyCFunction)hello, METH_NOARGS, hellofunc_docs},
+	{NULL, NULL, 0, NULL}
 };
 
-char helloworldmod_docs[] = "This is hello world module.";
-
-PyModuleDef helloworld_mod = {
+static struct PyModuleDef helloworld_mod = {
 	PyModuleDef_HEAD_INIT,
 	"helloworld",
-	helloworldmod_docs,
+	"mod doc",
 	-1,
 	helloworld_funcs,
-	NULL,
-	NULL,
-	NULL,
-	NULL
 };
 
 PyMODINIT_FUNC PyInit_helloworld(void) {

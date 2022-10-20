@@ -3,4 +3,3 @@
 import helloworld
 
 print(helloworld.hello());
-help(helloworld);
