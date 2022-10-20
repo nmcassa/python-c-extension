@@ -9,7 +9,7 @@ static PyMethodDef helloworld_funcs[] = {
 	{"heyman",(PyCFunction)heyman, METH_VARARGS, heymanfunc_docs},
 	{"add", (PyCFunction)add, METH_VARARGS, addfunc_docs},
 
-	{	NULL}
+	{NULL, NULL, 0, NULL}
 };
 
 static struct PyModuleDef helloworld_mod = {
