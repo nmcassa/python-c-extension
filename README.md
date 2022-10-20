@@ -1,5 +1,5 @@
 # Python C extension
-This is the practice of Python C extensions.  It is Python3 that I am practicing now!
+A fork of examples for Python C extensions, updated to work on python3 using a mac or linux
 
 ## Files in each directory
 * test.py: The test codes to run the module built from the C extension files.
@@ -8,6 +8,16 @@ This is the practice of Python C extensions.  It is Python3 that I am practicing
 * libmypy.h: The header file of C extension module.
 * libmypy.c: The source file of C extension module.
 * Makefile: Aggregate the building scripts.
+
+## Use
+
+Inside of any folder
+
+```
+make
+
+python3 test.py
+```
 
 ## 00-HelloWorld
 It is a general hello world practice.  One may start from here for the simplest Python C extension example.
