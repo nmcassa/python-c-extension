@@ -1,5 +1,4 @@
 #include "libmypy.h"
-#include <Python.h>
 
 char hellofunc_docs[] = "Hello world description.";
 
